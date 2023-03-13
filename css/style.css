@@ -165,16 +165,20 @@ img {
     border: 0;
     margin-bottom: 0;
 }
-.widget-curso__label{
+.widget-curso__label,
+.cursos__label{
     font-family: var(--fuenteHeadings);
     font-weight: bold;
 }
-.widget-curso__info{
+.widget-curso__info,
+.cursos__info{
     font-weight: normal;
 }
 
 .widget-curso__label,
-.widget-curso__info{
+.widget-curso__info,
+.cursos__label,
+.cursos__info{
     font-size: 1.8rem;
 }
 .boton--secundario{
@@ -195,4 +199,21 @@ img {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
     }
+}
+
+/* CURSOS */
+.cursos{
+    border-bottom: .3rem solid var(--gris);
+    padding: 3rem 0;
+}
+@media (min-width: 768px) {
+    .cursos{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.cursos:last-of-type{
+    border-bottom: 0;
+    margin-bottom: 0;
 }

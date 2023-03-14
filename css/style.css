@@ -19,6 +19,7 @@ body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2;/* interlineado */
+    margin: 0;
 }
 
 /* GLOBALES */
@@ -142,6 +143,10 @@ img {
     text-transform: uppercase;
     padding: 1rem 3rem;
     margin-bottom: 2rem;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -151,6 +156,14 @@ img {
 }
 .boton--primario{
     background-color: var(--negro);
+}
+.boton--submit{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .boton--submit{
+        width: auto;
+    }
 }
 
 /* SIDEBAR */
@@ -217,3 +230,56 @@ img {
     border-bottom: 0;
     margin-bottom: 0;
 }
+
+/* CONTACTO */
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    background-repeat: no-repeat;
+    height: 40rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    padding: 2rem;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: unset;
+}
+.campo__field{
+    padding: 1rem;
+}
+
+.campo__field--textarea{
+    flex: 1;
+    min-height: 10rem;
+}
+
+@media (min-width: 768px) {
+    .campo{
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+
+    .campo__label{
+        flex: 0 0 9rem;
+        text-align: right;
+    }
+    .campo__field{
+        flex: 1;
+    }
+    .campo__field--textarea{
+        height: 20rem;
+        flex: 1;
+    }
+}
+
